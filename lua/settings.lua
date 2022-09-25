@@ -15,6 +15,14 @@ local opt = {
 	writebackup = false,
 }
 
+local g = {
+	mapleader = " ",
+}
+
 for key, value in pairs(opt) do
 	vim.opt[key] = value
+end
+
+for key, value in pairs(g) do
+	vim.g[key] = value
 end
