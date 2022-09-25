@@ -14,4 +14,12 @@ return {
 	},
 
 	["MunifTanjim/nui.nvim"] = { module = "nui" },
+
+	["nvim-neo-tree/neo-tree.nvim"] = {
+		branch = "v2.x",
+		module = "neo-tree",
+		cmd = "Neotree",
+		setup = function() vim.g.neo_tree_remove_legacy_commands = true end,
+		config = function() require "configs.neo-tree" end,
+  	},
 }
