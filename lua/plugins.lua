@@ -21,5 +21,5 @@ return {
 		cmd = "Neotree",
 		setup = function() vim.g.neo_tree_remove_legacy_commands = true end,
 		config = function() require "configs.neo-tree" end,
-  	},
+  },
 }

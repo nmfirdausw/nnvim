@@ -17,22 +17,22 @@ packer.startup {
 	function(use)
 		for key, plugin in pairs(plugins) do
 			if type(key) == "string" and not plugin[1] then plugin[1] = key end
-			use(plugin)
-      		end
+				use(plugin)
+      end
 	end,
-    	config = {
-      		profile = {
-        		enable = true,
+	config = {
+		profile = {
+			enable = true,
 			threshold = 0.0001,
-      		},
-      		git = {
-        		clone_timeout = 300,
-        		subcommands = {
-          			update = "pull --rebase",
-        		},
-      		},
-      		auto_clean = true,
-      		compile_on_sync = true,
+		},
+		git = {
+			clone_timeout = 300,
+			subcommands = {
+				update = "pull --rebase",
+			},
+		},
+		auto_clean = true,
+		compile_on_sync = true,
 	},
 }
 if packer_bootstrap then
