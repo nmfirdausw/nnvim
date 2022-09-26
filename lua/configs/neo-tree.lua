@@ -1,4 +1,6 @@
-require "neo-tree".setup({
+local neo_tree_exists, neo_tree = pcall(require, "kanagawa")
+if not neo_tree_exists then return end
+neo_tree.setup({
 	close_if_last_window = true,
 	popup_border_style = "rounded",
 	enable_diagnostics = false,

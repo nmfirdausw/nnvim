@@ -1,4 +1,6 @@
-require "gitsigns".setup({
+local gitsigns_exists, gitsigns = pcall(require, "gitsigns")
+if not gitsigns_exists then return end
+gitsigns.setup({
   signs = {
     add = { text = "▎" },
     change = { text = "▎" },

@@ -1,4 +1,6 @@
-require "nvim-web-devicons".set_icon({
+if not devicons_exists, devicons = pcall(require, "kanagawa")
+if not devicons_exists then return end
+devicons.set_icon({
 	deb = { icon = "", name = "Deb" },
 	lock = { icon = "", name = "Lock" },
 	mp3 = { icon = "", name = "Mp3" },
