@@ -54,4 +54,9 @@ return {
     event = { "BufRead", "BufNewFile" },
     config = function() vim.g.cursorhold_updatetime = 100 end,
   },
+
+	["mrjones2014/smart-splits.nvim"] = {
+  	module = "smart-splits",
+    config = function() require "configs.smart-splits" end,
+  },
 }
