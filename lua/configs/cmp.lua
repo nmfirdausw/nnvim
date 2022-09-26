@@ -1,10 +1,10 @@
 local cmp_exists, cmp = pcall(require, "cmp")
 local luasnip_exists, luasnip = pcall(require, "luasnip")
-local lsp_kind_exists, lspkind = pcall(require, "lspkind")
+local _, lspkind = pcall(require, "lspkind")
 if not (cmp_exists and luasnip_exists) then return end
 local border_opts = {
   border = "single",
-  winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None"
+  winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None"
 }
 
 local function has_words_before()
