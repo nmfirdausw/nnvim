@@ -1,7 +1,11 @@
 return {
+	["lewis6991/impatient.nvim"] = {},
+
+	["nvim-lua/popup.nvim"] = {},
+
 	["nvim-lua/plenary.nvim"] = { module = "plenary" },
 
-	["lewis6991/impatient.nvim"] = {},
+	["MunifTanjim/nui.nvim"] = { module = "nui" },
 
 	["wbthomason/packer.nvim"] = {
 		cmd = { "PackerSync" },
@@ -12,8 +16,6 @@ return {
 		module = "nvim-web-devicons",
 		config = function() require "configs.devicons" end,
 	},
-
-	["MunifTanjim/nui.nvim"] = { module = "nui" },
 
 	["nvim-neo-tree/neo-tree.nvim"] = {
 		branch = "v2.x",
@@ -41,5 +43,10 @@ return {
 	["lewis6991/gitsigns.nvim"] = {
     event = "BufEnter",
     config = function() require "configs.gitsigns" end,
+  },
+
+	["stevearc/dressing.nvim"] = {
+    event = "UIEnter",
+    config = function() require "configs.dressing" end,
   },
 }
