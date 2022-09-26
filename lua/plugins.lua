@@ -59,4 +59,9 @@ return {
   	module = "smart-splits",
     config = function() require "configs.smart-splits" end,
   },
+
+	["NvChad/nvim-colorizer.lua"] = {
+    event = { "BufRead", "BufNewFile" },
+    config = function() require "configs.colorizer" end,
+  },
 }
