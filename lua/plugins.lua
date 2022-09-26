@@ -102,4 +102,11 @@ return {
   ["windwp/nvim-ts-autotag"] = { after = "nvim-treesitter" },
 
   ["JoosepAlviste/nvim-ts-context-commentstring"] = { after = "nvim-treesitter" },
+
+	["williamboman/mason.nvim"] = { config = function() require "configs.mason" end },
+
+  ["WhoIsSethDaniel/mason-tool-installer.nvim"] = {
+    after = "mason.nvim",
+    config = function() require "configs.mason-tool-installer" end,
+  },
 }
