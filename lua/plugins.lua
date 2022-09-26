@@ -27,4 +27,14 @@ return {
     as = 'kanagawa',
     config = function() require "configs.kanagawa" end,
   },
+
+	["Darazaki/indent-o-matic"] = {
+    event = "BufReadPost",
+    config = function() require "configs.indent-o-matic" end,
+  },
+
+	["lukas-reineke/indent-blankline.nvim"] = {
+    event = "BufRead",
+    config = function() require "configs.indent-blankline" end,
+  },
 }
