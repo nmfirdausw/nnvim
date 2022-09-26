@@ -75,4 +75,9 @@ return {
     event = { "BufRead", "BufNewFile" },
     config = function() require "configs.cinnamon" end,
   },
+
+	["max397574/better-escape.nvim"] = {
+    event = "InsertCharPre",
+    config = function() require "configs.better_escape" end,
+  },
 }
