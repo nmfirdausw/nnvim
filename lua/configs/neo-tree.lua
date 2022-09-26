@@ -2,7 +2,7 @@ local neo_tree_exists, neo_tree = pcall(require, "neo-tree")
 if not neo_tree_exists then return end
 neo_tree.setup({
 	close_if_last_window = true,
-	popup_border_style = "rounded",
+	popup_border_style = "single",
 	enable_diagnostics = false,
 	default_component_configs = {
 		indent = {
@@ -13,7 +13,7 @@ neo_tree.setup({
 			folder_closed = '',
 			folder_open = '',
 			folder_empty = '',
-			default = '',		
+			default = '',
 		},
 		modified = {
       symbol = '●',
