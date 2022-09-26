@@ -12,7 +12,7 @@ end
 local packer_bootstrap = ensure_packer()
 vim.cmd "packadd packer.nvim"
 local packer = require "packer"
-plugins = require "plugins"
+local plugins = require "plugins"
 packer.startup {
 	function(use)
 		for key, plugin in pairs(plugins) do
@@ -41,7 +41,7 @@ if packer_bootstrap then
 	vim.api.nvim_create_autocmd("User", {
     pattern = "PackerComplete",
     callback = function()
-      -- vim.cmd "bw | silent! MasonInstallAll" -- close packer window
+      vim.cmd "bw | silent! MasonInstallAll" -- close packer window
       require("packer").loader "nvim-treesitter"
     end,
   })

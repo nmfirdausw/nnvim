@@ -105,8 +105,5 @@ return {
 
 	["williamboman/mason.nvim"] = { config = function() require "configs.mason" end },
 
-  ["WhoIsSethDaniel/mason-tool-installer.nvim"] = {
-    after = "mason.nvim",
-    config = function() require "configs.mason-tool-installer" end,
-  },
+	["neovim/nvim-lspconfig"] = { config = function() require "configs.lspconfig" end },
 }
