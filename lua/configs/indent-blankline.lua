@@ -1,5 +1,5 @@
 local indent_blankline_exists, indent_blankline = pcall(require, "indent_blankline")
-if not inent_blankline_exists then return end
+if not indent_blankline_exists then return end
 indent_blankline.setup({
 	buftype_exclude = {
 		"nofile",
@@ -44,4 +44,6 @@ indent_blankline.setup({
   char = "▏",
   context_char = "▏",
   show_current_context = true,
+  space_char_blankline = " ",
+  show_current_context_start = true,
 })
