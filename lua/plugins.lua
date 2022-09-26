@@ -80,4 +80,20 @@ return {
     event = "InsertCharPre",
     config = function() require "configs.better_escape" end,
   },
+
+	["nvim-treesitter/nvim-treesitter"] = {
+    run = ":TSUpdate",
+    event = { "BufRead", "BufNewFile" },
+    cmd = {
+      "TSInstall",
+      "TSInstallInfo",
+      "TSInstallSync",
+      "TSUninstall",
+      "TSUpdate",
+      "TSUpdateSync",
+      "TSDisableAll",
+      "TSEnableAll",
+    },
+    config = function() require "configs.treesitter" end,
+  },
 }
