@@ -70,4 +70,9 @@ return {
     module = { "toggleterm", "toggleterm.terminal" },
     config = function() require "configs.toggleterm" end,
   },
+
+	["declancm/cinnamon.nvim"] = {
+    event = { "BufRead", "BufNewFile" },
+    config = function() require "configs.cinnamon" end,
+  },
 }
