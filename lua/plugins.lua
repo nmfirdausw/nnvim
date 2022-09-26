@@ -103,7 +103,33 @@ return {
 
   ["JoosepAlviste/nvim-ts-context-commentstring"] = { after = "nvim-treesitter" },
 
+	["onsails/lspkind.nvim"] = {
+    module = "lspkind",
+    config = function() require "configs.lspkind" end,
+  },
+
 	["williamboman/mason.nvim"] = { config = function() require "configs.mason" end },
 
 	["neovim/nvim-lspconfig"] = { config = function() require "configs.lspconfig" end },
+
+  ["rafamadriz/friendly-snippets"] = { opt = true },
+
+  ["L3MON4D3/LuaSnip"] = {
+    module = "luasnip",
+    wants = "friendly-snippets",
+    config = function() require "configs.luasnip" end,
+  },
+
+	["hrsh7th/nvim-cmp"] = {
+    event = "InsertEnter",
+    config = function() require "configs.cmp" end,
+  },
+
+  ["saadparwaiz1/cmp_luasnip"] = { after = "nvim-cmp" },
+
+  ["hrsh7th/cmp-buffer"] = { after = "nvim-cmp" },
+
+  ["hrsh7th/cmp-path"] = { after = "nvim-cmp" },
+
+	["hrsh7th/cmp-nvim-lsp"] = { after = "nvim-cmp" },
 }
