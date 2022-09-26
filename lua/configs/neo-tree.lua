@@ -13,7 +13,11 @@ neo_tree.setup({
 			folder_closed = '',
 			folder_open = '',
 			folder_empty = '',
-			default = '',		},
+			default = '',		
+		},
+		modified = {
+      symbol = '●',
+    },
 		git_status = {
 			symbols = {
 				added = '',
@@ -54,8 +58,8 @@ neo_tree.setup({
 		window = {
 			position = "float",
 		},
-  	},
+  },
 	event_handlers = {
-    		{ event = "neo_tree_buffer_enter", handler = function(_) vim.opt_local.signcolumn = "auto" end },
+    { event = "neo_tree_buffer_enter", handler = function(_) vim.opt_local.signcolumn = "auto" end },
 	},
 })
