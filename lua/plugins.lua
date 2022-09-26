@@ -49,4 +49,9 @@ return {
     event = "UIEnter",
     config = function() require "configs.dressing" end,
   },
+
+  ["antoinemadec/FixCursorHold.nvim"] = {
+    event = { "BufRead", "BufNewFile" },
+    config = function() vim.g.cursorhold_updatetime = 100 end,
+  },
 }
