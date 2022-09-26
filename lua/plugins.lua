@@ -7,6 +7,8 @@ return {
 
 	["MunifTanjim/nui.nvim"] = { module = "nui" },
 
+	["famiu/bufdelete.nvim"] = { cmd = { "Bdelete", "Bwipeout" } },
+
 	["wbthomason/packer.nvim"] = {
 		cmd = { "PackerSync" },
 		config = function() require "plugins" end,
@@ -34,6 +36,10 @@ return {
 	['rebelot/kanagawa.nvim'] = {
     as = 'kanagawa',
     config = function() require "configs.kanagawa" end,
+  },
+
+  ["rebelot/heirline.nvim"] = {
+    config = function() require "configs.heirline" end,
   },
 
 	["Darazaki/indent-o-matic"] = {
@@ -143,6 +149,4 @@ return {
   ["hrsh7th/cmp-path"] = { after = "nvim-cmp" },
 
 	["hrsh7th/cmp-nvim-lsp"] = { after = "nvim-cmp" },
-
-
 }
