@@ -1,4 +1,4 @@
-local neo_tree_exists, neo_tree = pcall(require, "kanagawa")
+local neo_tree_exists, neo_tree = pcall(require, "neo-tree")
 if not neo_tree_exists then return end
 neo_tree.setup({
 	close_if_last_window = true,

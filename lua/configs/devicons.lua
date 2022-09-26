@@ -1,4 +1,4 @@
-if not devicons_exists, devicons = pcall(require, "kanagawa")
+local devicons_exists, devicons = pcall(require, "nvim-web-devicons")
 if not devicons_exists then return end
 devicons.set_icon({
 	deb = { icon = "", name = "Deb" },

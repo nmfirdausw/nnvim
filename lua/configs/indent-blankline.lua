@@ -1,4 +1,4 @@
-if not indent_blankline_exists, indent_blankline = pcall(require, "kanagawa")
+local indent_blankline_exists, indent_blankline = pcall(require, "indent_blankline")
 if not inent_blankline_exists then return end
 indent_blankline.setup({
 	buftype_exclude = {
