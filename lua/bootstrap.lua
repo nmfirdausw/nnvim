@@ -37,4 +37,12 @@ packer.startup {
 }
 if packer_bootstrap then
 	packer.sync()
+
+	vim.api.nvim_create_autocmd("User", {
+    pattern = "PackerComplete",
+    callback = function()
+      -- vim.cmd "bw | silent! MasonInstallAll" -- close packer window
+      require("packer").loader "nvim-treesitter"
+    end,
+  })
 end

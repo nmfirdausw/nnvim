@@ -4,10 +4,10 @@ treesitter.setup({
   ensure_installed = {
 		"lua",
 		"php",
-		"javascript"
-		"html"
-		"css"
-		"rust"
+		"javascript",
+		"html",
+		"css",
+		"rust",
 	},
   sync_install = false,
   ignore_install = {},

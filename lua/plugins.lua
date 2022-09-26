@@ -96,4 +96,10 @@ return {
     },
     config = function() require "configs.treesitter" end,
   },
+
+	["p00f/nvim-ts-rainbow"] = { after = "nvim-treesitter" },
+
+  ["windwp/nvim-ts-autotag"] = { after = "nvim-treesitter" },
+
+  ["JoosepAlviste/nvim-ts-context-commentstring"] = { after = "nvim-treesitter" },
 }
