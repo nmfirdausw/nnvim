@@ -101,6 +101,11 @@ return {
 
   ["windwp/nvim-ts-autotag"] = { after = "nvim-treesitter" },
 
+	["windwp/nvim-autopairs"] = {
+    event = "InsertEnter",
+    config = function() require "configs.autopairs" end,
+  },
+
   ["JoosepAlviste/nvim-ts-context-commentstring"] = { after = "nvim-treesitter" },
 
 	["onsails/lspkind.nvim"] = {
@@ -132,4 +137,6 @@ return {
   ["hrsh7th/cmp-path"] = { after = "nvim-cmp" },
 
 	["hrsh7th/cmp-nvim-lsp"] = { after = "nvim-cmp" },
+
+
 }
