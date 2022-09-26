@@ -64,4 +64,10 @@ return {
     event = { "BufRead", "BufNewFile" },
     config = function() require "configs.colorizer" end,
   },
+
+	 ["akinsho/toggleterm.nvim"] = {
+    cmd = "ToggleTerm",
+    module = { "toggleterm", "toggleterm.terminal" },
+    config = function() require "configs.toggleterm" end,
+  },
 }
