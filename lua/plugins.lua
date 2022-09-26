@@ -37,4 +37,9 @@ return {
     event = "BufRead",
     config = function() require "configs.indent-blankline" end,
   },
+
+	["lewis6991/gitsigns.nvim"] = {
+    event = "BufEnter",
+    config = function() require "configs.gitsigns" end,
+  },
 }
