@@ -109,6 +109,14 @@ return {
     config = function() require "configs.treesitter" end,
   },
 
+  ["JoosepAlviste/nvim-ts-context-commentstring"] = { after = "nvim-treesitter" },
+
+  ["numToStr/Comment.nvim"] = {
+    module = { "Comment", "Comment.api" },
+    keys = { "gc", "gb", "g<", "g>" },
+    config = function() require "configs.comment" end,
+  },
+
 	["p00f/nvim-ts-rainbow"] = { after = "nvim-treesitter" },
 
   ["windwp/nvim-ts-autotag"] = { after = "nvim-treesitter" },
@@ -117,8 +125,6 @@ return {
     event = "InsertEnter",
     config = function() require "configs.autopairs" end,
   },
-
-  ["JoosepAlviste/nvim-ts-context-commentstring"] = { after = "nvim-treesitter" },
 
 	["onsails/lspkind.nvim"] = {
     module = "lspkind",
