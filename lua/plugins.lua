@@ -42,6 +42,11 @@ return {
     config = function() require "configs.heirline" end,
   },
 
+  ["akinsho/bufferline.nvim"] = {
+    after = "nvim-web-devicons",
+    config = function() require "configs.bufferline" end,
+  },
+
 	["Darazaki/indent-o-matic"] = {
     event = "BufReadPost",
     config = function() require "configs.indent-o-matic" end,
